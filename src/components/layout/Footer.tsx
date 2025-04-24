@@ -17,7 +17,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/web-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Web Development
                 </Link>
@@ -25,7 +25,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/web-cms-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Web CMS Development
                 </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/e-commerce"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   E-Commerce Solutions
                 </Link>
@@ -41,7 +41,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/erp-crm"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Custom ERP & CRM Development Solutions
                 </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/cyber-security"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Cyber Security Solutions
                 </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/python-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Python Development Solutions
                 </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/graphics-designing"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Graphics Designing Services
                 </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/responsive-web-designing"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Responsive Web Designing Services
                 </Link>
@@ -90,7 +90,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/psd-to-html"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   PSD TO HTML
                 </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/react-js"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   React JS
                 </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/angular-js"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Angular JS
                 </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/vue-js"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Vue JS
                 </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/android-app-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Android App Development
                 </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/ios-app-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   IOS App Development
                 </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/hybrid-platform-app-development"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Hybrid Platform App Development
                 </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   About Us
                 </Link>
@@ -163,7 +163,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/company/careers"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Careers
                 </Link>
@@ -171,7 +171,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/case-studies"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Case Studies
                 </Link>
@@ -188,7 +188,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/search-engine-optimization"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Search Engine Optimization
                 </Link>
@@ -196,7 +196,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/search-engine-marketing"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Search Engine Marketing
                 </Link>
@@ -204,7 +204,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/social-media-marketing"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Social Media Marketing Services
                 </Link>
@@ -212,7 +212,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/software-qa"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Software QA
                 </Link>
@@ -220,7 +220,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/it-blogs"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   IT Blog
                 </Link>
@@ -228,7 +228,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/it-solutions"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   IT Solutions
                 </Link>
@@ -243,7 +243,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/help-faq"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Help & FAQ
                 </Link>
@@ -251,7 +251,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Contact Us
                 </Link>
@@ -259,7 +259,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/get-a-quote"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Get a quote
                 </Link>
@@ -267,7 +267,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Privacy Policy
                 </Link>
@@ -275,7 +275,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms-of-use"
-                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors duration-300"
                 >
                   Terms Of Use
                 </Link>
@@ -297,33 +297,33 @@ const Footer = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors duration-300"
             >
-              <Facebook size={18} className="text-white" />
+              <Facebook size={18} className="text-white hover:text-jamuni" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors duration-300"
             >
-              <Twitter size={18} className="text-white" />
+              <Twitter size={18} className="text-white hover:text-jamuni" />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors duration-300"
             >
-              <Linkedin size={18} className="text-white" />
+              <Linkedin size={18} className="text-white hover:text-jamuni" />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors duration-300"
             >
-              <Instagram size={18} className="text-white" />
+              <Instagram size={18} className="text-white hover:text-jamuni" />
             </a>
           </div>
         </div>

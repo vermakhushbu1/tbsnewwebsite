@@ -21,9 +21,11 @@ const ServiceCard = ({
   link = "/services/digital-marketing",
 }: ServiceCardProps) => {
   return (
-    <Card className="bg-dark-gray h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden group border-jamuni hover:border-pink-DEFAULT">
+    <Card className="bg-dark-gray h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden group border-2 animate-border-rotation hover:border-pink-DEFAULT">
       <CardHeader className="pb-2">
-        <div className="mb-4">{icon}</div>
+        <div className="mb-4 transition-colors duration-300 group-hover:text-pink-DEFAULT">
+          {icon}
+        </div>
         <h3 className="text-xl font-bold text-white group-hover:text-pink-DEFAULT transition-colors">
           {title}
         </h3>
@@ -34,7 +36,7 @@ const ServiceCard = ({
       <CardFooter>
         <Link
           to={link}
-          className="text-pink-DEFAULT font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+          className="text-pink-DEFAULT font-medium flex items-center gap-1 group-hover:gap-2 transition-all hover:text-jamuni-light"
         >
           Learn More <ArrowRight className="w-4 h-4" />
         </Link>

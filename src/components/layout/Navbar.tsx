@@ -88,7 +88,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded">
+          <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded pink-glow">
             WebInfoTech
           </div>
         </Link>
@@ -102,11 +102,13 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                 className={`text-sm font-medium ${isActive(item.path) ? "text-pink-DEFAULT" : "text-white"} hover:text-pink-DEFAULT flex items-center transition-colors duration-300`}
               >
                 {item.name}
-                {item.hasChildren && <ChevronDown className="ml-1 h-4 w-4" />}
+                {item.hasChildren && (
+                  <ChevronDown className="ml-1 h-4 w-4 text-pink-DEFAULT" />
+                )}
               </Link>
 
               {item.hasChildren && (
-                <div className="absolute left-0 mt-2 w-64 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-jamuni">
+                <div className="absolute left-0 mt-2 w-64 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-jamuni pink-glow">
                   <div className="max-h-[400px] overflow-y-auto">
                     {item.children?.map((child) => (
                       <Link
@@ -134,25 +136,25 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
             >
               <Search className="h-5 w-5" />
             </Button>
-            <div className="absolute right-0 top-full mt-2 w-80 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 border border-jamuni">
+            <div className="absolute right-0 top-full mt-2 w-80 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 border border-jamuni pink-glow">
               <div className="relative mb-3">
                 <Input
                   placeholder="Search..."
                   className="pl-10 pr-4 py-2 bg-dark-light text-white border-jamuni"
                 />
-                <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-DEFAULT" />
               </div>
               <div className="flex space-x-2">
                 <Button
                   size="sm"
-                  className="flex-1 bg-pink-DEFAULT hover:bg-pink-dark text-white"
+                  className="flex-1 bg-gradient-pink hover:bg-gradient-button-hover text-white"
                 >
                   Search
                 </Button>
                 <Button
                   size="sm"
                   variant="outline"
-                  className="flex-1 border-jamuni text-white hover:bg-dark-light"
+                  className="flex-1 border-jamuni text-white hover:bg-dark-light hover:text-pink-DEFAULT"
                 >
                   Cancel
                 </Button>
@@ -161,12 +163,12 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
           </div>
           <Link
             to="/get-a-quote"
-            className="bg-gradient-pink text-white px-4 py-2 rounded flex items-center font-medium text-sm hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300"
+            className="bg-gradient-pink text-white px-4 py-2 rounded flex items-center font-medium text-sm hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300 pink-glow"
           >
             Get A Quote <span className="ml-1">→</span>
           </Link>
           <button className="lg:hidden">
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6 text-pink-DEFAULT" />
           </button>
         </div>
 
@@ -183,7 +185,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[300px] sm:w-[400px] bg-dark-gray border-l border-jamuni"
+            className="w-[300px] sm:w-[400px] bg-dark-gray border-l border-jamuni pink-glow"
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between py-4 border-b border-jamuni">
@@ -192,7 +194,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                   className="flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded">
+                  <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded pink-glow">
                     WebInfoTech
                   </div>
                 </Link>
@@ -202,7 +204,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                   onClick={() => setIsOpen(false)}
                   className="text-white hover:text-pink-DEFAULT"
                 >
-                  <X className="h-5 w-5" />
+                  <X className="h-5 w-5 text-pink-DEFAULT" />
                 </Button>
               </div>
               <nav className="flex-1 overflow-auto py-4">
@@ -212,7 +214,9 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                       {item.hasChildren ? (
                         <div className="px-4">
                           <div className="flex items-center justify-between py-2 font-medium text-white">
-                            <span>{item.name}</span>
+                            <span className="hover:text-pink-DEFAULT transition-colors duration-300">
+                              {item.name}
+                            </span>
                             <ChevronDown className="h-4 w-4 text-pink-DEFAULT" />
                           </div>
                           <ul className="pl-4 pt-2 pb-1 space-y-1 max-h-[300px] overflow-y-auto border-l border-jamuni">
@@ -251,14 +255,14 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                 </div>
                 <Link
                   to="/contact"
-                  className="block w-full text-center bg-pink-DEFAULT text-white py-2 rounded hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300"
+                  className="block w-full text-center bg-gradient-pink text-white py-2 rounded hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300 pink-glow"
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="inline-block mr-2 h-4 w-4" /> Contact Us
                 </Link>
                 <Link
                   to="/get-a-quote"
-                  className="block w-full text-center border border-pink-DEFAULT text-pink-DEFAULT py-2 rounded hover:bg-pink-DEFAULT hover:text-white transition-colors duration-300"
+                  className="block w-full text-center border border-pink-DEFAULT text-pink-DEFAULT py-2 rounded hover:bg-gradient-pink hover:text-white transition-colors duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   Get A Quote

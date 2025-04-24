@@ -44,6 +44,28 @@
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
+@keyframes rotate-border {
+  0% {
+    border-color: var(--color-pink);
+  }
+  25% {
+    border-color: var(--color-pink-light);
+  }
+  50% {
+    border-color: var(--color-jamuni);
+  }
+  75% {
+    border-color: var(--color-jamuni-light);
+  }
+  100% {
+    border-color: var(--color-pink);
+  }
+}
+
+.animate-border-rotation {
+  animation: rotate-border 3s linear infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;
@@ -87,6 +109,104 @@
     background-color: #000000;
     color: #ffffff;
   }
+}
+
+/* Custom Color Variables */
+:root {
+  --color-pink: #ff0080;
+  --color-pink-light: #ff4da6;
+  --color-pink-dark: #d400b0;
+  --color-jamuni: #8e44ad;
+  --color-jamuni-light: #9b59b6;
+  --color-jamuni-dark: #6c3483;
+  --color-black: #000000;
+  --color-dark-gray: #1a1a1a;
+  --color-dark-light: #333333;
+  --color-white: #ffffff;
+}
+
+/* Custom Gradient Backgrounds */
+.bg-gradient-jamuni {
+  background: linear-gradient(
+    135deg,
+    var(--color-jamuni) 0%,
+    var(--color-jamuni-dark) 100%
+  );
+}
+
+.bg-gradient-pink {
+  background: linear-gradient(
+    135deg,
+    var(--color-pink-light) 0%,
+    var(--color-pink) 100%
+  );
+}
+
+.bg-gradient-card {
+  background: linear-gradient(
+    135deg,
+    var(--color-pink-light) 0%,
+    var(--color-jamuni) 100%
+  );
+}
+
+.bg-gradient-button {
+  background: linear-gradient(
+    135deg,
+    var(--color-pink) 0%,
+    var(--color-jamuni) 100%
+  );
+}
+
+.bg-gradient-button-hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-jamuni) 0%,
+    var(--color-pink) 100%
+  );
+}
+
+/* Glow Effects */
+.pink-glow {
+  box-shadow: 0 0 15px rgba(255, 77, 166, 0.5);
+}
+
+.jamuni-glow {
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.5);
+}
+
+/* Hover Effects */
+.link-hover-effect {
+  color: var(--color-pink);
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+}
+
+.link-hover-effect:hover {
+  color: var(--color-jamuni);
+  border-bottom: 1px solid var(--color-jamuni);
+}
+
+.card-hover-effect {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(142, 68, 173, 0.2);
+}
+
+.card-hover-effect:hover .card-icon {
+  color: var(--color-pink);
+}
+
+.card-hover-effect:hover .card-heading {
+  color: var(--color-pink);
 }
 
 /* Custom Color Variables */
