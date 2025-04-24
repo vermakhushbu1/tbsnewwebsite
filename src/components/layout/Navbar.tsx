@@ -83,18 +83,14 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm border-b border-gray-100">
-      {/* Top bar removed as requested */}
-
+    <header className="fixed top-0 left-0 w-full z-50 bg-black shadow-md border-b border-jamuni">
       {/* Main navbar */}
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img
-            src="https://www.webinfratech.com/assets/images/logo.png"
-            alt="Tbs Web Technology Logo"
-            className="h-10"
-          />
+          <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded">
+            WebInfoTech
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -103,20 +99,20 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
             <div key={item.name} className="relative group">
               <Link
                 to={item.path}
-                className={`text-sm font-medium ${isActive(item.path) ? "text-blue-600" : "text-gray-800"} hover:text-blue-600 flex items-center`}
+                className={`text-sm font-medium ${isActive(item.path) ? "text-pink-DEFAULT" : "text-white"} hover:text-pink-DEFAULT flex items-center transition-colors duration-300`}
               >
                 {item.name}
                 {item.hasChildren && <ChevronDown className="ml-1 h-4 w-4" />}
               </Link>
 
               {item.hasChildren && (
-                <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="absolute left-0 mt-2 w-64 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-jamuni">
                   <div className="max-h-[400px] overflow-y-auto">
                     {item.children?.map((child) => (
                       <Link
                         key={child.name}
                         to={child.path}
-                        className={`block px-4 py-2 text-sm ${location.pathname === child.path ? "text-blue-600 bg-blue-50" : "text-gray-800"} hover:bg-blue-50 hover:text-blue-600`}
+                        className={`block px-4 py-2 text-sm ${location.pathname === child.path ? "text-pink-DEFAULT bg-dark-light" : "text-white"} hover:bg-dark-light hover:text-pink-DEFAULT transition-colors duration-300`}
                       >
                         {child.name}
                       </Link>
@@ -130,28 +126,34 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
 
         {/* Right side elements */}
         <div className="hidden lg:flex items-center space-x-4">
-          {/* Chat icon removed as requested */}
           <div className="flex items-center relative group">
             <Button
               variant="ghost"
               size="icon"
-              className="group-hover:bg-gray-100"
+              className="group-hover:bg-dark-light text-white hover:text-pink-DEFAULT"
             >
-              <Search className="h-5 w-5 text-gray-700" />
+              <Search className="h-5 w-5" />
             </Button>
-            <div className="absolute right-0 top-full mt-2 w-80 bg-white shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4">
+            <div className="absolute right-0 top-full mt-2 w-80 bg-dark-gray shadow-lg rounded-md overflow-hidden z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 border border-jamuni">
               <div className="relative mb-3">
-                <Input placeholder="Search..." className="pl-10 pr-4 py-2" />
+                <Input
+                  placeholder="Search..."
+                  className="pl-10 pr-4 py-2 bg-dark-light text-white border-jamuni"
+                />
                 <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               </div>
               <div className="flex space-x-2">
                 <Button
                   size="sm"
-                  className="flex-1 bg-blue-600 hover:bg-blue-700"
+                  className="flex-1 bg-pink-DEFAULT hover:bg-pink-dark text-white"
                 >
                   Search
                 </Button>
-                <Button size="sm" variant="outline" className="flex-1">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1 border-jamuni text-white hover:bg-dark-light"
+                >
                   Cancel
                 </Button>
               </div>
@@ -159,7 +161,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
           </div>
           <Link
             to="/get-a-quote"
-            className="bg-blue-900 text-white px-4 py-2 rounded flex items-center font-medium text-sm hover:bg-blue-800 transition-colors"
+            className="bg-gradient-pink text-white px-4 py-2 rounded flex items-center font-medium text-sm hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300"
           >
             Get A Quote <span className="ml-1">→</span>
           </Link>
@@ -171,28 +173,34 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="lg:hidden">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:text-pink-DEFAULT"
+            >
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <SheetContent
+            side="right"
+            className="w-[300px] sm:w-[400px] bg-dark-gray border-l border-jamuni"
+          >
             <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between py-4 border-b">
+              <div className="flex items-center justify-between py-4 border-b border-jamuni">
                 <Link
                   to="/"
                   className="flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  <img
-                    src="https://www.webinfratech.com/assets/images/logo.png"
-                    alt="Tbs Web Technology Logo"
-                    className="h-8"
-                  />
+                  <div className="bg-gradient-card text-white font-bold text-xl px-4 py-2 rounded">
+                    WebInfoTech
+                  </div>
                 </Link>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => setIsOpen(false)}
+                  className="text-white hover:text-pink-DEFAULT"
                 >
                   <X className="h-5 w-5" />
                 </Button>
@@ -203,16 +211,16 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                     <li key={item.name}>
                       {item.hasChildren ? (
                         <div className="px-4">
-                          <div className="flex items-center justify-between py-2 font-medium">
+                          <div className="flex items-center justify-between py-2 font-medium text-white">
                             <span>{item.name}</span>
-                            <ChevronDown className="h-4 w-4" />
+                            <ChevronDown className="h-4 w-4 text-pink-DEFAULT" />
                           </div>
-                          <ul className="pl-4 pt-2 pb-1 space-y-1 max-h-[300px] overflow-y-auto">
+                          <ul className="pl-4 pt-2 pb-1 space-y-1 max-h-[300px] overflow-y-auto border-l border-jamuni">
                             {item.children?.map((child) => (
                               <li key={child.name}>
                                 <Link
                                   to={child.path}
-                                  className={`block py-2 text-sm ${location.pathname === child.path ? "text-blue-600" : "text-gray-600"}`}
+                                  className={`block py-2 text-sm ${location.pathname === child.path ? "text-pink-DEFAULT" : "text-gray-300"} hover:text-pink-DEFAULT transition-colors duration-300`}
                                   onClick={() => setIsOpen(false)}
                                 >
                                   {child.name}
@@ -224,7 +232,7 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                       ) : (
                         <Link
                           to={item.path}
-                          className={`block px-4 py-2 ${isActive(item.path) ? "text-blue-600 font-medium" : "text-gray-800"}`}
+                          className={`block px-4 py-2 ${isActive(item.path) ? "text-pink-DEFAULT font-medium" : "text-white"} hover:text-pink-DEFAULT transition-colors duration-300`}
                           onClick={() => setIsOpen(false)}
                         >
                           {item.name}
@@ -234,23 +242,23 @@ const Navbar = ({ logo = "/vite.svg" }: NavbarProps) => {
                   ))}
                 </ul>
               </nav>
-              <div className="py-4 border-t space-y-3">
+              <div className="py-4 border-t border-jamuni space-y-3">
                 <div className="px-4 space-y-2">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Phone className="h-4 w-4 mr-2" />
+                  <div className="flex items-center text-sm text-gray-300">
+                    <Phone className="h-4 w-4 mr-2 text-pink-DEFAULT" />
                     <span>7233062243</span>
                   </div>
                 </div>
                 <Link
                   to="/contact"
-                  className="block w-full text-center bg-blue-600 text-white py-2 rounded"
+                  className="block w-full text-center bg-pink-DEFAULT text-white py-2 rounded hover:shadow-md hover:shadow-pink-DEFAULT/30 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="inline-block mr-2 h-4 w-4" /> Contact Us
                 </Link>
                 <Link
                   to="/get-a-quote"
-                  className="block w-full text-center border border-blue-600 text-blue-600 py-2 rounded"
+                  className="block w-full text-center border border-pink-DEFAULT text-pink-DEFAULT py-2 rounded hover:bg-pink-DEFAULT hover:text-white transition-colors duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   Get A Quote

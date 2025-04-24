@@ -12,7 +12,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({
   icon = (
-    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+    <div className="w-12 h-12 rounded-full bg-pink-DEFAULT/20 flex items-center justify-center text-pink-DEFAULT">
       🚀
     </div>
   ),
@@ -21,18 +21,20 @@ const ServiceCard = ({
   link = "/services/digital-marketing",
 }: ServiceCardProps) => {
   return (
-    <Card className="bg-white h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden group">
+    <Card className="bg-dark-gray h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden group border-jamuni hover:border-pink-DEFAULT">
       <CardHeader className="pb-2">
         <div className="mb-4">{icon}</div>
-        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        <h3 className="text-xl font-bold text-white group-hover:text-pink-DEFAULT transition-colors">
+          {title}
+        </h3>
       </CardHeader>
       <CardContent>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-300">{description}</p>
       </CardContent>
       <CardFooter>
         <Link
           to={link}
-          className="text-blue-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+          className="text-pink-DEFAULT font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
         >
           Learn More <ArrowRight className="w-4 h-4" />
         </Link>

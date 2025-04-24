@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ProjectCard from "../cards/ProjectCard";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 
@@ -11,16 +10,8 @@ interface Project {
   description: string;
 }
 
-interface PortfolioShowcaseProps {
-  title?: string;
-  subtitle?: string;
-  projects?: Project[];
-}
-
-const PortfolioShowcase = ({
-  title = "Our Recent Projects",
-  subtitle = "Explore our portfolio of successful digital marketing campaigns and web development projects",
-  projects = [
+const PortfolioShowcase = () => {
+  const projects: Project[] = [
     {
       id: "1",
       image:
@@ -75,11 +66,11 @@ const PortfolioShowcase = ({
       description:
         "Comprehensive content strategy that increased lead generation by 75% for a B2B company.",
     },
-  ],
-}: PortfolioShowcaseProps) => {
+  ];
+
   const categories = [
     "All",
-    ...new Set(projects.map((project) => project.category)),
+    ...Array.from(new Set(projects.map((project) => project.category))),
   ];
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -89,13 +80,16 @@ const PortfolioShowcase = ({
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-gray-50">
+    <section className="py-20 px-4 md:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            {title}
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our <span className="text-pink-DEFAULT">Portfolio</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            Explore our portfolio of successful digital marketing campaigns and
+            web development projects
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -104,7 +98,11 @@ const PortfolioShowcase = ({
               key={category}
               variant={activeCategory === category ? "default" : "outline"}
               onClick={() => setActiveCategory(category)}
-              className={`rounded-full ${activeCategory === category ? "bg-blue-600 hover:bg-blue-700" : "text-gray-700 hover:text-blue-600"}`}
+              className={
+                activeCategory === category
+                  ? "bg-pink-DEFAULT hover:bg-pink-dark"
+                  : "border-jamuni-DEFAULT text-white hover:bg-jamuni-DEFAULT/20"
+              }
             >
               {category}
             </Button>
@@ -113,14 +111,50 @@ const PortfolioShowcase = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <ProjectCard
+            <div
               key={project.id}
-              id={project.id}
-              image={project.image}
-              title={project.title}
-              category={project.category}
-              description={project.description}
-            />
+              className="bg-dark-gray border border-jamuni-DEFAULT hover:border-pink-DEFAULT transition-colors duration-300 rounded-lg overflow-hidden group"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6">
+                <div className="mb-2">
+                  <span className="text-xs font-medium text-pink-DEFAULT bg-pink-DEFAULT/10 px-2 py-1 rounded">
+                    {project.category}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-DEFAULT transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <Link
+                  to={`/case-studies/${project.id}`}
+                  className="text-pink-DEFAULT font-medium inline-flex items-center group-hover:underline"
+                >
+                  View Details
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
 
@@ -128,7 +162,7 @@ const PortfolioShowcase = ({
           <Link to="/portfolio">
             <Button
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+              className="border-pink-DEFAULT text-pink-DEFAULT hover:bg-pink-DEFAULT hover:text-white"
             >
               View All Projects
             </Button>

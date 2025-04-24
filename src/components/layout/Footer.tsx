@@ -4,18 +4,20 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white">
+    <footer className="bg-black text-white border-t border-jamuni">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-12">
           {/* Web Engineering */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Web Engineering</h3>
+            <h3 className="text-lg font-semibold text-pink-DEFAULT">
+              Web Engineering
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/services/web-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Web Development
                 </Link>
@@ -23,7 +25,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/web-cms-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Web CMS Development
                 </Link>
@@ -31,7 +33,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/e-commerce"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   E-Commerce Solutions
                 </Link>
@@ -39,7 +41,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/erp-crm"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Custom ERP & CRM Development Solutions
                 </Link>
@@ -47,7 +49,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/cyber-security"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Cyber Security Solutions
                 </Link>
@@ -55,7 +57,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/python-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Python Development Solutions
                 </Link>
@@ -65,12 +67,14 @@ const Footer = () => {
 
           {/* Front-End Development */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Front-End Development</h3>
+            <h3 className="text-lg font-semibold text-pink-DEFAULT">
+              Front-End Development
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/services/graphics-designing"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Graphics Designing Services
                 </Link>
@@ -78,7 +82,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/responsive-web-designing"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Responsive Web Designing Services
                 </Link>
@@ -86,7 +90,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/psd-to-html"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   PSD TO HTML
                 </Link>
@@ -94,7 +98,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/react-js"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   React JS
                 </Link>
@@ -102,7 +106,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/angular-js"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Angular JS
                 </Link>
@@ -110,7 +114,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/vue-js"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Vue JS
                 </Link>
@@ -120,12 +124,14 @@ const Footer = () => {
 
           {/* Mobile App Development */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Mobile App Development</h3>
+            <h3 className="text-lg font-semibold text-pink-DEFAULT">
+              Mobile App Development
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/services/android-app-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Android App Development
                 </Link>
@@ -133,7 +139,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/ios-app-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   IOS App Development
                 </Link>
@@ -141,7 +147,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/hybrid-platform-app-development"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Hybrid Platform App Development
                 </Link>
@@ -149,7 +155,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   About Us
                 </Link>
@@ -157,7 +163,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/company/careers"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Careers
                 </Link>
@@ -165,7 +171,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/case-studies"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Case Studies
                 </Link>
@@ -175,12 +181,14 @@ const Footer = () => {
 
           {/* Digital Marketing */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Digital Marketing</h3>
+            <h3 className="text-lg font-semibold text-pink-DEFAULT">
+              Digital Marketing
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/services/search-engine-optimization"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Search Engine Optimization
                 </Link>
@@ -188,7 +196,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/search-engine-marketing"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Search Engine Marketing
                 </Link>
@@ -196,7 +204,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/social-media-marketing"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Social Media Marketing Services
                 </Link>
@@ -204,7 +212,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/software-qa"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Software QA
                 </Link>
@@ -212,7 +220,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/it-blogs"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   IT Blog
                 </Link>
@@ -220,7 +228,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/it-solutions"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   IT Solutions
                 </Link>
@@ -230,12 +238,12 @@ const Footer = () => {
 
           {/* Support */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Support</h3>
+            <h3 className="text-lg font-semibold text-pink-DEFAULT">Support</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/help-faq"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Help & FAQ
                 </Link>
@@ -243,7 +251,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -251,7 +259,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/get-a-quote"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Get a quote
                 </Link>
@@ -259,7 +267,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -267,7 +275,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms-of-use"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-pink-DEFAULT transition-colors"
                 >
                   Terms Of Use
                 </Link>
@@ -277,10 +285,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright and Social Media - White Background */}
-      <div className="bg-white py-6">
+      {/* Copyright and Social Media */}
+      <div className="bg-dark-gray py-6 border-t border-jamuni">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-300 text-sm">
             Copyright © 2015-{new Date().getFullYear()} WebInfratech IT
             Company.
           </p>
@@ -289,7 +297,7 @@ const Footer = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 hover:bg-blue-700 p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
             >
               <Facebook size={18} className="text-white" />
             </a>
@@ -297,7 +305,7 @@ const Footer = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 hover:bg-blue-700 p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
             >
               <Twitter size={18} className="text-white" />
             </a>
@@ -305,7 +313,7 @@ const Footer = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 hover:bg-blue-700 p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
             >
               <Linkedin size={18} className="text-white" />
             </a>
@@ -313,7 +321,7 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 hover:bg-blue-700 p-2 rounded-md transition-colors"
+              className="bg-dark-light hover:bg-pink-DEFAULT p-2 rounded-md transition-colors"
             >
               <Instagram size={18} className="text-white" />
             </a>
